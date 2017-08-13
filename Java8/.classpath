@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre1.8.0_20">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="E:/DASDM/Softwares/JavaEE/jar files/mysql-connector-java-5.1.34-bin.jar"/>
+	<classpathentry kind="lib" path="E:/DASDM/Softwares/JavaEE/jar files/ojdbc14.jar"/>
+	<classpathentry kind="lib" path="E:/DASDM/Softwares/JavaEE/jar files/Hibernate steps lib/hibernatejar(IMP)/antlr-2.7.6.jar"/>
+	<classpathentry kind="lib" path="E:/DASDM/Softwares/JavaEE/jar files/Hibernate steps lib/hibernatejar(IMP)/asm.jar"/>
+	<classpathentry kind="lib" path="E:/DASDM/Softwares/JavaEE/jar files/Hibernate steps lib/hibernatejar(IMP)/asm-attrs.jar"/>
+	<classpathentry kind="lib" path="E:/DASDM/Softwares/JavaEE/jar files/Hibernate steps lib/hibernatejar(IMP)/c3p0-0.9.1.jar"/>
+	<classpathentry kind="lib" path="E:/DASDM/Softwares/JavaEE/jar files/Hibernate steps lib/hibernatejar(IMP)/cglib-2.1.3.jar"/>
+	<classpathentry kind="lib" path="E:/DASDM/Softwares/JavaEE/jar files/Hibernate steps lib/hibernatejar(IMP)/commons-collections-2.1.1.jar"/>
+	<classpathentry kind="lib" path="E:/DASDM/Softwares/JavaEE/jar files/Hibernate steps lib/hibernatejar(IMP)/commons-dbcp.jar"/>
+	<classpathentry kind="lib" path="E:/DASDM/Softwares/JavaEE/jar files/Hibernate steps lib/hibernatejar(IMP)/commons-logging-1.0.4.jar"/>
+	<classpathentry kind="lib" path="E:/DASDM/Softwares/JavaEE/jar files/Hibernate steps lib/hibernatejar(IMP)/commons-pool.jar"/>
+	<classpathentry kind="lib" path="E:/DASDM/Softwares/JavaEE/jar files/Hibernate steps lib/hibernatejar(IMP)/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="E:/DASDM/Softwares/JavaEE/jar files/Hibernate steps lib/hibernatejar(IMP)/ehcache-1.2.3.jar"/>
+	<classpathentry kind="lib" path="E:/DASDM/Softwares/JavaEE/jar files/Hibernate steps lib/hibernatejar(IMP)/ejb3-persistence.jar"/>
+	<classpathentry kind="lib" path="E:/DASDM/Softwares/JavaEE/jar files/Hibernate steps lib/hibernatejar(IMP)/hibernate3.jar"/>
+	<classpathentry kind="lib" path="E:/DASDM/Softwares/JavaEE/jar files/Hibernate steps lib/hibernatejar(IMP)/hibernate-annotations.jar"/>
+	<classpathentry kind="lib" path="E:/DASDM/Softwares/JavaEE/jar files/Hibernate steps lib/hibernatejar(IMP)/hibernate-c3p0-4.3.8.Final.jar"/>
+	<classpathentry kind="lib" path="E:/DASDM/Softwares/JavaEE/jar files/Hibernate steps lib/hibernatejar(IMP)/hibernate-core-4.2.7.Final.jar"/>
+	<classpathentry kind="lib" path="E:/DASDM/Softwares/JavaEE/jar files/Hibernate steps lib/hibernatejar(IMP)/hibernate-validator.jar"/>
+	<classpathentry kind="lib" path="E:/DASDM/Softwares/JavaEE/jar files/Hibernate steps lib/hibernatejar(IMP)/jdbc2_0-stdext.jar"/>
+	<classpathentry kind="lib" path="E:/DASDM/Softwares/JavaEE/jar files/Hibernate steps lib/hibernatejar(IMP)/jta.jar"/>
+	<classpathentry kind="lib" path="E:/DASDM/Softwares/JavaEE/jar files/Hibernate steps lib/hibernatejar(IMP)/log4j-1.2.11.jar"/>
+	<classpathentry kind="lib" path="E:/DASDM/Softwares/JavaEE/jar files/Hibernate steps lib/hibernatejar(IMP)/mysql-connector-java-5.1.34-bin.jar"/>
+	<classpathentry kind="lib" path="E:/DASDM/Softwares/JavaEE/jar files/Hibernate steps lib/hibernatejar(IMP)/xerces-2.6.2.jar"/>
+	<classpathentry kind="lib" path="E:/DASDM/Softwares/JavaEE/jar files/Hibernate steps lib/hibernatejar(IMP)/slf4j-api-1.7.5.jar"/>
+	<classpathentry kind="lib" path="E:/DASDM/Softwares/JavaEE/jar files/Hibernate steps lib/hibernatejar(IMP)/slf4j-log4j12-1.7.5.jar"/>
+	<classpathentry kind="lib" path="E:/DASDM/Softwares/JavaEE/jar files/Hibernate steps lib/hibernatejar(IMP)/hibernate-commons-annotations-4.0.5.Final.jar"/>
+	<classpathentry kind="lib" path="E:/DASDM/Softwares/JavaEE/jar files/Parking/spring-old-4.3.2 with hibernate/gson-2.3.1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
