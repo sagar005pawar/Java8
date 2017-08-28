@@ -27,5 +27,12 @@ public class InstanceTest
 			System.out.println(str);
          */		
 
+        
+        String name1 = new String("sagar");
+        String name2 = new String("sagar");
+        System.out.println(name1.equals(name2));
+        System.out.println(name1 == name1);
+
+        
     }  
 }

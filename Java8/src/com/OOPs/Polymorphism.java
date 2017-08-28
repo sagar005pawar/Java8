@@ -31,6 +31,14 @@ class Superclass
 		return "Super-Class";
 	}
 	
+	public void getId(Object o){
+		System.out.println("Object");
+	}
+
+	public void getId(String s){
+		System.out.println("String");
+	}
+	
 }
 
 class Subclass extends Superclass
@@ -49,7 +57,8 @@ public class Polymorphism {
 		Superclass s2 = new Subclass();
 		System.out.println(s2.print());
 		
-		
+		s2.getId(null);			//providing object value null
+		//String is subclass of object thats why subclass method called
 		
 		
 /*		

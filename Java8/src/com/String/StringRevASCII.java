@@ -1,6 +1,5 @@
 package com.String;
 
-
 public class StringRevASCII
 {
 	
@@ -69,9 +68,14 @@ public class StringRevASCII
 	
 	
 	public static void  main(String[] args) {	
-		StringRevASCII s1= new StringRevASCII("sagar pawar");			//str Rev	
+		StringRevASCII s1 = new StringRevASCII("sagar pawar");			//str Rev	
 		
-		s1.strTOint("-1023");								//str TO int
+		s1.strTOint("-1023");											//str TO int
 		s1.ASCII();
+		
+	
+		
+		
+		
 	}
 }

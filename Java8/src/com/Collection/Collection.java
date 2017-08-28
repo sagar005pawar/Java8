@@ -110,18 +110,29 @@ public class Collection {
 		Product p3 = new Product(1, "Pawar", 200.0f);
 		Product p4 = p3.clone();
 
-		
+/*		
 		List<String> lista = new ArrayList<>();
-		lista.add("a");
 		lista.add("b");
 		lista.add("c");
+		lista.add("a");
 //		lista.remove(1);
+//		Collections.sort(lista);
+//		System.out.println("First location Object= " + lista.get(0));
 		System.out.println("Collections= " + Collections.synchronizedList(lista));
 		Collections.reverse(lista);
-		Collections.swap(lista, 0, 1);
+//		Collections.swap(lista, 0, 1);
 		lista.forEach(System.out::println);
 		System.out.println(Collections.checkedList(lista, String.class));
-
+*/		
+		
+		
+/*		
+		Set<String> s1 = new HashSet<>();
+		s1.add(null);
+		s1.add("Sagar");					//add 3 objects in set
+		s1.add(null);						//unique object allows in set
+		s1.forEach(System.out::println);	//prints 2 objects null & sagar
+*/
 		
 /*		
 		List<String> listb = new LinkedList<>();
@@ -131,6 +142,7 @@ public class Collection {
 		listb.remove(1);
 		System.out.println(listb.get(1));
 */
+		
 		
 /*		
 		List<String> list = new ArrayList<>();
@@ -145,6 +157,7 @@ public class Collection {
 			System.out.println(string + "= " + Collections.frequency(list, string));
 		}
 */		
+
 		
 /*				
 		Set<Product> s2 = new HashSet<>();
@@ -153,22 +166,22 @@ public class Collection {
 		s2.add(p4);
 		s2.add(p2);
 		s2.forEach(System.out::println);
-		System.out.println(s2.size());
+		System.out.println(s2.size());		//3
 
 		Set<Employee> s3 = new HashSet<>();
 		s3.add(e1);
 		s3.add(e1);
 		s3.add(e3);
-		System.out.println(s3.size());
+		System.out.println(s3.size());		//2
 
 		System.out.println("e1= "+e1.hashCode() + "\t"+e1.equals(e2) + "\t" + e1.equals(e3));
 		System.out.println("e2= "+e2.hashCode() + "\t"+e2.equals(e1) + "\t" + e2.equals(e3));
 		System.out.println("e3= "+e3.hashCode() + "\t"+e3.equals(e2) + "\t" + e3.equals(e1));
 
 		Map<Product, Employee> m1 = new HashMap<>();
-		m1.put(p1, e1);		//TreeMap<Employee, Employee>  
-		m1.put(p2, e2);		//uses comparable Interface
-		m1.put(p3, e3);		//b'coz here User-Define-Class as key
+		m1.put(p1, e1);		// TreeMap<Employee, Employee>
+		m1.put(p2, e2);		// uses comparable Interface
+		m1.put(p3, e3);		// b'coz here User-Define-Class as key
 		m1.put(p4, e2);
 		Set s1 = m1.entrySet();
 		Iterator i1 = s1.iterator();
@@ -189,7 +202,7 @@ public class Collection {
 		ht.put("vivek", 2);
 		System.out.println(ht);
 */		
-				
+
 		
 /*		
 		List<Employee> list = new ArrayList<>();		//Type Inference, since Java8
@@ -197,11 +210,15 @@ public class Collection {
 		list.add(e2);
 		list.add(e3);
 		System.out.println(list.isEmpty());
+		Collections.sort(list);
+		Collections.reverse(list);
+		list.forEach(System.out::println);
+
 */
 		
 /*		
 		Set<String> s1 = new HashSet<>();	//Type Inference java8
-		s1.add("sagar");	//Wrapper class objects TreeSet Reverse Ordered
+		s1.add("sagar");	
 		s1.add("vijay");	//Takes unique objects by using hashcode() & equalTo() methods
 		s1.add("pawar");	//checks the objects hashCodes for uniqness(Set)
 		s1.add("sagar");
@@ -211,11 +228,22 @@ public class Collection {
 */		
 
 /*		
+		Set<String> s1 = new LinkedHashSet<>();		//Type Inference java8 
+		s1.add("sagar");	
+		s1.add("vijay");	//Takes unique objects by using hashcode() & equalTo() methods
+		s1.add("pawar");	//checks the objects hashCodes for uniqness(Set)
+		s1.add("sagar");
+		s1.add("vijay");
+		s1.add("pawar");
+		s1.forEach(System.out::println);
+*/
+		
+/*		
 		List<Employee> a1 = new ArrayList<>();
 		for(int i=1;i<=100;i++) {
 			a1.add(new Employee(3, "Sagar", 3500.0f));
-		}		//get 90th numbered Object from Collection using get()
-		System.out.println(a1.get(90));
+		}		//get 90th numbered Object from Collection using get(n-1)
+		System.out.println(a1.get(89));
 */
 
 /*		
@@ -232,7 +260,7 @@ public class Collection {
 		list.add(e2);
 		list.add(e3);				
 		//Set maintain Insertion order
-		Set<Employee> s1 = new LinkedHashSet<Employee>(); 
+		Set<Employee> s1 = new LinkedHashSet<>(); 
 		s1.addAll(list);
 		s1.forEach(System.out::println);		
 */
@@ -251,7 +279,7 @@ public class Collection {
 
 		
 /*		
-		List<Employee> list = new ArrayList<Employee>();
+		List<Employee> list = new ArrayList<>();
 		list.add(e1);
 		list.add(e2);
 		list.add(e3);		//Salary Comparator ASC
@@ -306,6 +334,7 @@ public class Collection {
 		System.out.println(s3.size());
 */
 
+/*		
 		List<String> s1 = new ArrayList<>();
 		s1.add("sagar");	//Wrapper class objects ArraList Reverse Ordered
 		s1.add("vijay");
@@ -321,17 +350,17 @@ public class Collection {
 		Collections.sort(s1, (l1, l2)->((-1)*(l1.compareTo(l2))));	//sorted List Reverse-Ordered
 		Collections.reverse(s1);	//Inserted Order Descending
 		s1.forEach(System.out::println);
-
+*/
 		
 /*		
-		List<String> s1 = new ArrayList<String>();
+		List<String> s1 = new ArrayList<>();
 		s1.add("sagar");	//Wrapper class objects ArraList Reverse Ordered
 		s1.add("vijay");
 		s1.add("pawar");
 		s1.add("sagar");	//Wrapper class objects ArraList Reverse Ordered
 		s1.add("vijay");
 
-		Set<String> s3 = new HashSet<String>();		//duplicate removing from List
+		Set<String> s3 = new HashSet<>();		//duplicate removing from List
 		s3.addAll(s1);
 		s1.clear();
 		s1.addAll(s3);
@@ -340,6 +369,7 @@ public class Collection {
 //		Collections.reverse(s1);		//Inserted Order Descending
 		s1.forEach(System.out::println);
 */
+		
 		
 /*		
 		Set<String> s1 = new TreeSet<>();
@@ -382,6 +412,7 @@ public class Collection {
 		list.forEach(System.out::println);		
 */		
 
+		
 /*		
 		Map<Employee, Employee> m1 = new TreeMap<>(Collections.reverseOrder(new NameComparatorDESC()));
 		m1.put(e2, e1);		//TreeMap<Employee, Employee>  
@@ -414,10 +445,29 @@ public class Collection {
 			System.out.println(entry.getKey() + " "+ entry.getValue());
 		}		
 */
+
+/*		
+ 		//Map<Wrapper/User-Define class, Wrapper/User-Define class>
+		Map<Integer, Product> m1 = new TreeMap<Integer, Product>(Collections.reverseOrder());
+		m1.put(3, p1);		//TreeMap<Integer, Employee>
+		m1.put(1, p2);		//b'coz here Wrapper-Class as key
+		m1.put(2, p3);		//so we don't need to uses comparable Interface by default implements
+		m1.put(2, p3);
 		
+		Set s1 = m1.entrySet();
+		Iterator i1 = s1.iterator();
+		
+		while (i1.hasNext()) {
+			Map.Entry<Integer, Product> entry = (Map.Entry<Integer, Product>) i1.next();
+			System.out.println(entry.getKey() + " "+ entry.getValue());
+		}		
+*/		
 		
 /*		
-		Set<Employee> set = new TreeSet<Employee>();     //sorted by comparable interface
+		Set<Employee> set = new TreeSet<>();     												//sorted by comparable interface ASC
+		Set<Employee> set = new TreeSet<>(Collections.reverseOrder());     						//sorted by comparable interface DESC
+		Set<Employee> set = new TreeSet<>(new NameComparator());								//sorted by comparator interface ASC
+		Set<Employee> set = new TreeSet<>(Collections.reverseOrder(new NameComparator()));	    //sorted by comparator interface DESC
 		set.add(e1);
 		set.add(e2);
 		set.add(e3);
@@ -429,8 +479,8 @@ public class Collection {
 
 		
 /*		
-		Set<Employee> set = new TreeSet<Employee>(new NameComparator());     //sorted by comparator interface
-		Set<Employee> set = new TreeSet<Employee>();     //sorted by comparable interface
+		Set<Employee> set = new TreeSet<>(new NameComparator());     //sorted by comparator interface
+		Set<Employee> set = new TreeSet<>();					     //sorted by comparable interface
 		set.add(e1);
 		set.add(e2);
 		set.add(e3);
@@ -441,9 +491,8 @@ public class Collection {
 */	
 		
 		
-		
 /*		
-		Set<Employee> set = new LinkedHashSet<Employee>();
+		Set<Employee> set = new LinkedHashSet<>();
 		set.add(e1);
 		set.add(e2);
 		set.add(e3);
@@ -454,7 +503,7 @@ public class Collection {
 */		
 
 /*		
-		Queue<Employee> priority_q = new PriorityQueue<Employee>();		
+		Queue<Employee> priority_q = new PriorityQueue<>();		
 		priority_q.offer(e3);		//priority by id using comparable
 		priority_q.offer(e1);
 		priority_q.offer(e2);
@@ -462,7 +511,7 @@ public class Collection {
 */		
 
 /*		
-		Queue<Employee> arr_q = new ArrayDeque<Employee>();
+		Queue<Employee> arr_q = new ArrayDeque<>();
 		arr_q.offer(e1);
 		arr_q.offer(e2);
 		arr_q.offer(e3);
