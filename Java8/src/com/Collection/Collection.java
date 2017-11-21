@@ -133,16 +133,15 @@ public class Collection {
 		s1.add(null);						//unique object allows in set
 		s1.forEach(System.out::println);	//prints 2 objects null & sagar
 */
-		
+
 /*		
 		List<String> listb = new LinkedList<>();
 		listb.add("a");
 		listb.add("b");
 		listb.add("c");
 		listb.remove(1);
-		System.out.println(listb.get(1));
-*/
-		
+		System.out.println(listb.get(1));			// c
+*/		
 		
 /*		
 		List<String> list = new ArrayList<>();
@@ -156,36 +155,43 @@ public class Collection {
 		for (String string : unique) {
 			System.out.println(string + "= " + Collections.frequency(list, string));
 		}
-*/		
-
+*/
 		
-/*				
+/*		
 		Set<Product> s2 = new HashSet<>();
 		s2.add(p1);
-		s2.add(p3);
-		s2.add(p4);
+		s2.add(p3);						// set has overrides equals() & hashcode() methods
+		s2.add(p4);						// equals() & hashcode() checks duplicate objects
 		s2.add(p2);
 		s2.forEach(System.out::println);
 		System.out.println(s2.size());		//3
+*/
 
+/*		
 		Set<Employee> s3 = new HashSet<>();
 		s3.add(e1);
 		s3.add(e1);
 		s3.add(e3);
+		s3.add(new Employee(2, "Sagar", 3500.0f));
+		Employee e4 = new Employee(2, "Sagar", 3500.0f);
+		s3.add(e4);
+		s3.forEach(System.out::println);
 		System.out.println(s3.size());		//2
 
 		System.out.println("e1= "+e1.hashCode() + "\t"+e1.equals(e2) + "\t" + e1.equals(e3));
 		System.out.println("e2= "+e2.hashCode() + "\t"+e2.equals(e1) + "\t" + e2.equals(e3));
 		System.out.println("e3= "+e3.hashCode() + "\t"+e3.equals(e2) + "\t" + e3.equals(e1));
-
+*/
+		
+		
+/*
 		Map<Product, Employee> m1 = new HashMap<>();
 		m1.put(p1, e1);		// TreeMap<Employee, Employee>
 		m1.put(p2, e2);		// uses comparable Interface
 		m1.put(p3, e3);		// b'coz here User-Define-Class as key
 		m1.put(p4, e2);
-		Set s1 = m1.entrySet();
-		Iterator i1 = s1.iterator();
-		
+		Set s1 = m1.entrySet();				// entrySet() for Map.Entry
+		Iterator i1 = s1.iterator();		
 		while (i1.hasNext()) {
 			Map.Entry<Product, Employee> entry = (Entry<Product, Employee>) i1.next();
 			System.out.println(entry.getKey() + "\t" + entry.getValue());
@@ -194,15 +200,16 @@ public class Collection {
 		
 		Map<String, Integer> tm = new TreeMap<>();
 		tm.put("vivek", 1);
-		tm.put("vivek", 2);
-		System.out.println(tm);
+		tm.put("vivek", 2);					// key's same so unique key managed	
+		tm.put("vivek", 3);
+		System.out.println(tm);				// last entry will print
 
 		Map<String, Integer> ht = new Hashtable<>();
 		ht.put("vivek", 1);
 		ht.put("vivek", 2);
-		System.out.println(ht);
-*/		
-
+		System.out.println(ht);				// last entry will print
+*/
+				
 		
 /*		
 		List<Employee> list = new ArrayList<>();		//Type Inference, since Java8
@@ -251,7 +258,7 @@ public class Collection {
 		list.add(e1);
 		list.add(e2);
 		list.add(e3);	//Stream API skip(number of objects)						
-		list.stream().skip(2).forEach(System.out::println);
+		list.stream().skip(2).forEach(System.out::println); 		//skip from starting
 */		
 
 /*		
@@ -264,6 +271,23 @@ public class Collection {
 		s1.addAll(list);
 		s1.forEach(System.out::println);		
 */
+
+/*		
+		List<Employee> list = new ArrayList<>();
+		list.add(e1);
+		list.add(e2);
+		list.add(e3);		//Salary Comparator ASC
+
+//		Collections.reverse(list);					//comparable for user defined class objects
+
+		list.sort(new NameComparator());
+		list.forEach(System.out::println);	
+		System.out.println();		
+		list.sort(new SalaryComparatorDESC());
+		list.forEach(System.out::println);		
+		System.out.println();
+		list.sort(new SalaryComparatorASC());
+		list.forEach(System.out::println);			
 		
 		//ASC
 		//Collections.sort(list, (u1, u2)->u1.getName().compareToIgnoreCase(u2.getName()));
@@ -276,23 +300,7 @@ public class Collection {
 		//Collections.sort(list, new NameComparator());				//Names ASC
 		//Collections.sort(list, new NameComparatorDESC());			//Names DESC
 		//list.forEach(System.out::println);	
-
-		
-/*		
-		List<Employee> list = new ArrayList<>();
-		list.add(e1);
-		list.add(e2);
-		list.add(e3);		//Salary Comparator ASC
-		
-		list.sort(new NameComparator());
-		list.forEach(System.out::println);	
-		System.out.println();		
-		list.sort(new SalaryComparatorDESC());
-		list.forEach(System.out::println);		
-		System.out.println();
-		list.sort(new SalaryComparatorASC());
-		list.forEach(System.out::println);			
-*/		
+*/
 		
 
 /*		
@@ -336,7 +344,7 @@ public class Collection {
 
 /*		
 		List<String> s1 = new ArrayList<>();
-		s1.add("sagar");	//Wrapper class objects ArraList Reverse Ordered
+		s1.add("sagar");	//Wrapper class objects ArrayList Reverse Ordered
 		s1.add("vijay");
 		s1.add("pawar");
 		s1.add("sagar");	//Wrapper class objects ArraList Reverse Ordered
@@ -351,6 +359,17 @@ public class Collection {
 		Collections.reverse(s1);	//Inserted Order Descending
 		s1.forEach(System.out::println);
 */
+		
+/*		
+		List<String> s1 = new ArrayList<>();
+		s1.add("sagar");	//Wrapper class objects ArraList Reverse Ordered
+		s1.add("vijay");
+		s1.add("pawar");
+		s1.add("sagar");	//Wrapper class objects ArraList Reverse Ordered
+		s1.add("vijay");
+		Collections.replaceAll(s1, "pawar", "patil");	//Collections.replaceAll(list, oldValue, newValue)
+		s1.forEach(System.out::println);
+*/		
 		
 /*		
 		List<String> s1 = new ArrayList<>();
@@ -382,8 +401,7 @@ public class Collection {
 		s1.add("pawar");		
 		s1.forEach(System.out::println);
 */
-		
-		
+				
 /*		
 		List<Employee> list = new ArrayList<>();
 		list.add(e1);
@@ -400,6 +418,11 @@ public class Collection {
 		
 		list.sort(new SalaryComparatorASC());
 		list.forEach(System.out::println);
+
+		System.out.println(Collections.min(list, new SalaryComparatorASC()));;
+
+		System.out.println(Collections.max(list, new SalaryComparatorASC()));;
+
 */
 		
 		
@@ -538,6 +561,7 @@ class Employee implements Comparable<Employee>, Cloneable, Serializable
 		result = prime * result + Float.floatToIntBits(salary);
 		return result;
 	}
+	
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -565,6 +589,7 @@ class Employee implements Comparable<Employee>, Cloneable, Serializable
 		this.name = name;
 		this.salary = salary;
 	}
+
 	public int getId() {
 		return id;
 	}
@@ -586,13 +611,7 @@ class Employee implements Comparable<Employee>, Cloneable, Serializable
 	
 	@Override
 	public int compareTo(Employee o) {
-		if(this.id < o.id){
-			return -1;
-		} else if (this.id > o.id) {
-			return 1;
-		} else {
-			return 0;			
-		}
+		return this.id - o.id;
 	}
 	
 	public Employee clone() throws CloneNotSupportedException{

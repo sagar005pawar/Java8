@@ -6,7 +6,7 @@ public class StringRevASCII
 	public StringRevASCII(String str)
 	{
 		String rev="", rev1="";
-		for(int i=(str.length()-1);i>=0;i--){
+		for(int i=(str.length()-1);i>=0;i--) {
 			rev+=(str.charAt(i));
 		}
 		System.out.println("StringRev(reverse char's)= "+rev.replaceAll("\\s", "").trim().replace("a", "A"));

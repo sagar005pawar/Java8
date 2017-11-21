@@ -21,7 +21,7 @@ public class FailSafeExample
             premiumPhone.put("Sony", "Xperia Z");
         }
         
-        
+        System.out.println("\n");
         List<String> l1 = new CopyOnWriteArrayList();
         l1.addAll(premiumPhone.keySet());
         ListIterator li = l1.listIterator(0);
@@ -30,7 +30,7 @@ public class FailSafeExample
         	l1.add("sagar");
         }
 
-        
+        System.out.println("\n");
         Set<String> s1 = new ConcurrentSkipListSet<>();
         s1.addAll(l1);
         Iterator li1 = s1.iterator();
