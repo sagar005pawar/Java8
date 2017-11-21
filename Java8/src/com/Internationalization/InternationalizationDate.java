@@ -6,7 +6,7 @@ import java.util.*;
 public class InternationalizationDate {  
       
 	static void printDate(Locale locale){  
-		DateFormat formatter=DateFormat.getDateInstance(DateFormat.DEFAULT,locale);  
+		DateFormat formatter=DateFormat.getDateInstance(DateFormat.DEFAULT, locale);  
 		Date currentDate=new Date();  
 		String date=formatter.format(currentDate);  
 		System.out.println(date+" "+locale);  

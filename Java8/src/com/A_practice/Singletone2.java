@@ -33,8 +33,15 @@ public class Singletone2 {
 			Aclass a = Aclass.getInstance();
 			Aclass b = Aclass.getInstance();
 			a.setId(10);
-			System.out.println(a.getId());
-			System.out.println(b.getId());
+			System.out.println(a.getId());		//10
+			System.out.println(b.getId());		//10
+
+			Aclass a1 = new Aclass();			//java.lang.Exception: Instance already exist
+			Aclass b1 = new Aclass();
+			a1.setId(10);
+			System.out.println(a1.getId());
+			System.out.println(b1.getId());
+
 		} catch (Exception e) {
 			System.out.println(e);	
 		}

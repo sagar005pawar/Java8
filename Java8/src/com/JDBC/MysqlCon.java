@@ -18,15 +18,14 @@ public class MysqlCon
 		try {
 	        long startTime = System.currentTimeMillis();  
 			Class.forName("com.mysql.jdbc.Driver");  
-			con=DriverManager.getConnection(  
-			"jdbc:mysql://localhost:3306/spring","root","root");  
+			con=DriverManager.getConnection("jdbc:mysql://localhost:3306/spring","root","root");  
 			//here sonoo is database name, root is username and password  
 			Statement stmt=con.createStatement();  
 //			System.out.println(stmt.executeUpdate("delete from employee where id='7'"));
 			ResultSet rs=stmt.executeQuery("select * from employee");  
-			while(rs.next())  
+			while(rs.next())
 				System.out.println(rs.getInt(1)+"  "+rs.getString(2)+"  "+rs.getFloat(3));  
-	        System.out.println("Time taken by Concating with String: "+(System.currentTimeMillis()-startTime)+" ms");			
+	        System.out.println("Time taken by MySQL: "+(System.currentTimeMillis()-startTime)+" ms");			
 	        
 /*	        
 	        DatabaseMetaData dbmd=con.getMetaData();  

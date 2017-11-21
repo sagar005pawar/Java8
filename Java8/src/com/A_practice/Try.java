@@ -16,6 +16,6 @@ public class Try {
     public static void main(String[] args) {
         long startTime = System.currentTimeMillis();  
         new Bb().n_squares(2000);
-        System.out.println((System.currentTimeMillis()-startTime)+"ms");
+        System.out.println((System.currentTimeMillis()-startTime)+" ms");		//2245 ms
     }
 }

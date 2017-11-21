@@ -1,5 +1,6 @@
 package com.A_practice;
 
+//constructor not allowed for singleton, so set private constructor() & instance create by static method
 class MySingleton
 {
     private static MySingleton instance = null;
@@ -33,7 +34,7 @@ public class Singleton {
 		MySingleton a = MySingleton.getInstance();
 		MySingleton b = MySingleton.getInstance();
 		a.setX(15);
-	    System.out.println("Value of a.x = " + a.getX());
-	    System.out.println("Value of b.x = " + b.getX());
+	    System.out.println("Value of a.x = " + a.getX());	//15
+	    System.out.println("Value of b.x = " + b.getX());	//15
 	}    
 }

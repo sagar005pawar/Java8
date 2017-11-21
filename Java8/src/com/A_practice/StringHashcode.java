@@ -5,14 +5,14 @@ public class StringHashcode {
 		String a = "Aa";
 		String b = "BB";
 		
-		System.out.println(a.hashCode());
-		System.out.println(b.hashCode());
+		System.out.println(a.hashCode());						//2112
+		System.out.println(b.hashCode());						//2112
 		
-		System.out.println(31 * ('C' - 'D') == ('B' - 'a'));
-		System.out.println(31 * ('B' - 'A') == ('a' - 'B'));
+		System.out.println(31 * ('C' - 'D') == ('B' - 'a'));	//true
+		System.out.println(31 * ('B' - 'A') == ('a' - 'B'));	//true
 
-		System.out.println("common_prefixDB".hashCode());
-		System.out.println("common_prefixCa".hashCode());
+		System.out.println("common_prefixDB".hashCode());		//-1027514780
+		System.out.println("common_prefixCa".hashCode());		//-1027514780
 	}
 }
 

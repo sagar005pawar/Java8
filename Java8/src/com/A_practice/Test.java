@@ -10,6 +10,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+/* 
+ * class extends only one class and implements multiple interfaces
+ * interface extends multiple interfaces but not implements any class
+ * 
+*/
 
 class abc
 {

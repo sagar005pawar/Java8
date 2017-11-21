@@ -1,5 +1,6 @@
 package com.controlStatements;
 
+// SQS Pune Interview
 public class Statements {
 
 	public static void main(String[] args) {
@@ -13,7 +14,7 @@ public class Statements {
 			System.out.println("abc");
 		}
 
-//		if(true < false) {						//compiled failed
+//		if(true < false) {						//compiled failed, syntax error
 //			System.out.println("abc");
 //		}
 
@@ -21,7 +22,9 @@ public class Statements {
 		//for();								//compiled failed
 	
 		for( ;  ; ) {}
-		
+
+		//for( ;  ; )							//compiled failed
+
 		
 		
 	}
